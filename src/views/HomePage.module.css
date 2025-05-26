@@ -1,0 +1,4 @@
+/* src/views/HomePage.module.css */
+.homePage { padding: 20px; text-align: center; }
+.homePage h1 { color: #333; margin-bottom: 15px; }
+.homePage p { color: #666; font-size: 1.1em; }
