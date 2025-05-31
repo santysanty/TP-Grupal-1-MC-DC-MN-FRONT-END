@@ -1,0 +1,37 @@
+.carrusel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.carrusel-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.carrusel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.carrusel-btn {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.carrusel-btn:hover {
+  color: #007bff;
+}

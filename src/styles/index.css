@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.card-team {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 250px;
+}
+
+.card-team__img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-team__nombre {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.btn-ver-mas {
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  border-radius: 6px;
+}

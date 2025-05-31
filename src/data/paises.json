@@ -1,0 +1,44 @@
+[
+  {
+    "id": "arg",
+    "title": "Argentina",
+    "category": "América del Sur",
+    "image": "https://flagcdn.com/w320/ar.png",
+    "description": "País ubicado en el extremo sur de América. Capital: Buenos Aires."
+  },
+  {
+    "id": "esp",
+    "title": "España",
+    "category": "Europa",
+    "image": "https://flagcdn.com/w320/es.png",
+    "description": "País del sur de Europa. Capital: Madrid. Parte de la Unión Europea."
+  },
+  {
+    "id": "jpn",
+    "title": "Japón",
+    "category": "Asia",
+    "image": "https://flagcdn.com/w320/jp.png",
+    "description": "Isla asiática con tecnología avanzada. Capital: Tokio."
+  },
+  {
+    "id": "can",
+    "title": "Canadá",
+    "category": "América del Norte",
+    "image": "https://flagcdn.com/w320/ca.png",
+    "description": "Segundo país más grande del mundo. Capital: Ottawa."
+  },
+  {
+    "id": "deu",
+    "title": "Alemania",
+    "category": "Europa",
+    "image": "https://flagcdn.com/w320/de.png",
+    "description": "Potencia industrial europea. Capital: Berlín."
+  },
+  {
+    "id": "bra",
+    "title": "Brasil",
+    "category": "América del Sur",
+    "image": "https://flagcdn.com/w320/br.png",
+    "description": "Conocido por el Amazonas y el fútbol. Capital: Brasília."
+  }
+]

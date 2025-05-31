@@ -1,0 +1,66 @@
+.card-data {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-data__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-data__body {
+  padding: 1rem;
+}
+
+.card-data__title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card-data__subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin: 0.5rem 0;
+}
+
+.card-data__highlight {
+  display: inline-block;
+  background: #ffda75;
+  padding: 0.3rem 0.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+.card-data__recipe {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.card-data__btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.card-data__btn:hover {
+  background-color: #0056b3;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; 
+  padding: 1rem;
+}

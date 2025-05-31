@@ -1,0 +1,86 @@
+/* src/components/Sidebar/Sidebar.module.css */
+.sidebar {
+  width: 250px; /* Ancho del sidebar */
+  background-color: #333; /* Color de fondo oscuro */
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Evita que el sidebar se encoja */
+}
+
+.logoContainer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px; /* Un poco de estilo para el logo */
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Asegurarse de que no haya margen por defecto */
+}
+
+.navLink {
+  display: block; /* Para que ocupe todo el ancho del li */
+  padding: 10px 15px; /* Más padding para los lados */
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añadida transición para el transform */
+  border-radius: 4px; /* Para esquinas redondeadas al hacer hover */
+  margin-bottom: 5px; /* Espacio entre enlaces */
+}
+
+.navLink:hover,
+.navLink:focus { /* Añadido focus para accesibilidad */
+  background-color: #555;
+  transform: translateX(5px); /* Pequeño efecto al pasar el mouse */
+}
+
+/* Estilos para el link activo (puedes implementarlo con NavLink de react-router-dom) */
+/* .navLink.active {
+  background-color: #007bff; // Un color distintivo para la página actual
+} */
+
+
+/* Responsividad para Sidebar en pantallas pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Ocupa todo el ancho en móviles */
+    height: auto; /* Altura automática */
+    flex-direction: row; /* Los enlaces se alinean en una fila */
+    justify-content: space-around; /* Espacia los enlaces */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra en la parte inferior */
+    position: fixed; /* Lo fija en la parte superior o inferior */
+    bottom: 0; /* Lo fija en la parte inferior de la pantalla */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  .navList {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan si son muchos */
+    justify-content: center;
+    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+  }
+  .navLink {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    margin: 0 5px; /* Espacio horizontal entre enlaces */
+  }
+  .logoContainer {
+    display: none; /* Ocultar el logo en pantallas pequeñas para ahorrar espacio */
+  }
+  /* Ajuste para el contenido principal cuando el sidebar está en la parte inferior */
+  body {
+    padding-bottom: 60px; /* Ajusta este valor según la altura de tu sidebar móvil */
+  }
+}
