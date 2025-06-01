@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+<<<<<<< HEAD
 .card-team {
   border: 1px solid #ddd;
   padding: 1rem;
@@ -39,3 +40,5 @@ code {
   text-decoration: none;
   border-radius: 6px;
 }
+=======
+>>>>>>> feature/mi-primer-aporte-sidebar

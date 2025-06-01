@@ -1,8 +1,6 @@
-// src/views/MemberPage.jsx
-
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { teamMembersDetails } from '../data/teamMembersDetails'; // Asegúrate de que esta ruta sea correcta
+import { teamMembersDetails } from '../data/teamMembersDetails';
 import styles from './MemberPage.module.css';
 
 export default function MemberPage() {
@@ -15,7 +13,7 @@ export default function MemberPage() {
   }
 
   return (
-    <div className={styles['member-profile-container']}> {/* Usa styles.clase */}
+    <div className={styles['member-profile-container']}>
       <div className={styles['member-header']}>
         <img
           src={member.imageUrl}
@@ -54,7 +52,7 @@ export default function MemberPage() {
       )}
 
       {/* SECCIÓN DE PROYECTOS */}
-        {member.projects && member.projects.length > 0 && (
+      {member.projects && member.projects.length > 0 && (
         <div className={styles['profile-section']}>
           <h2 className={styles['section-title']}>Proyectos</h2>
           <div className={styles['projects-grid']}>
@@ -67,7 +65,7 @@ export default function MemberPage() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={styles['project-button']} // COMENTARIO ELIMINADO DE AQUÍ
+                    className={styles['project-button']}
                   >
                     Ver Proyecto
                   </a>
@@ -90,10 +88,8 @@ export default function MemberPage() {
                 ) : (
                   React.cloneElement(tech.icon, {
                     className: styles['tech-icon-svg'],
-                    width: '60px', // Ojo: Este width y height están hardcodeados aquí,
-                    height: '60px', // y no están siendo controlados por el CSS Modules.
-                                    // Si quieres que el CSS Modules los controle,
-                                    // deberías eliminarlos de aquí.
+                    width: '60px',
+                    height: '60px',
                   })
                 )}
                 <p className={styles['tech-name']}>{tech.name}</p>
