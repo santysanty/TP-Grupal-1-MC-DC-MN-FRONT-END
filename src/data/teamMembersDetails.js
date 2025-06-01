@@ -58,7 +58,7 @@ export const teamMembersDetails = [
     // Datos para María (usado en HomePage y MemberPage)
     id: 'maria-nazar',
     name: 'María Nazar',
-    fullName: 'María Belén Nazar',
+    fullName: 'María  Nazar',
     imageUrl: mariaProfileImage,
     role: 'Front-end Engineer & UX Enthusiast',
     bio: 'Front-end engineer enfocada en accesibilidad y experiencia de usuario. Crea interfaces intuitivas y eficientes con un fuerte compromiso por las buenas prácticas y la accesibilidad web.',
