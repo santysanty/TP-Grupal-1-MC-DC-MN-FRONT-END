@@ -1,0 +1,206 @@
+/* src/views/MemberPage.module.css */
+
+/* Estilos generales del contenedor del perfil */
+.member-profile-container {
+    max-width: 900px;
+    margin: 0.1rem auto 1rem auto; /* REDUCIDO: Margen superior e inferior para más compactación */
+    padding: 1rem; /* REDUCIDO: Padding general de la tarjeta principal */
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos del encabezado del miembro (imagen y detalles) */
+.member-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem; /* REDUCIDO: Espacio debajo del encabezado (imagen, nombre, rol, bio) */
+}
+
+@media (min-width: 768px) {
+    .member-header {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+    .member-header-info {
+        margin-left: 1.2rem; /* Ligeramente reducido el margen a la izquierda de la info */
+    }
+}
+
+.member-profile-img {
+    width: 100px; /* REDUCIDO: Tamaño de la imagen de perfil */
+    height: 100px; /* REDUCIDO: Tamaño de la imagen de perfil */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff; /* Ligeramente más fino el borde */
+    margin-bottom: 0.8rem; /* REDUCIDO: Espacio debajo de la imagen en móvil */
+}
+
+@media (min-width: 768px) {
+    .member-profile-img {
+        margin-right: 1.2rem; /* Ligeramente reducido el margen a la derecha de la imagen */
+        margin-bottom: 0;
+    }
+}
+
+.member-header-info h1 {
+    font-size: 1.5rem; /* REDUCIDO: Título principal de la persona (ej. "Daniel Osvaldo Coria") */
+    color: #007bff;
+    margin-bottom: 0.3rem; /* REDUCIDO: Espacio debajo del nombre */
+}
+
+.member-role {
+    font-size: 0.9rem; /* Ligeramente reducido el rol */
+    color: #bbb;
+    margin-bottom: 0.6rem; /* REDUCIDO: Espacio debajo del rol */
+}
+
+.member-bio {
+    font-size: 0.85rem; /* Ligeramente reducido el tamaño del texto de la biografía */
+    line-height: 1.4; /* Ligeramente reducido el interlineado de la biografía */
+    color: #ccc;
+    font-weight: bold;
+    margin-bottom: 0.8rem; /* REDUCIDO: Espacio debajo de la biografía */
+}
+
+.member-portfolio-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem; /* REDUCIDO: Padding del botón de portfolio */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 0.9rem; /* REDUCIDO: Tamaño de fuente del botón */
+}
+
+.member-portfolio-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para secciones de perfil (Habilidades, Proyectos, Tecnologías) */
+.profile-section {
+    margin-top: 0.8rem; /* REDUCIDO: Espacio entre secciones */
+    padding-top: 0.1rem; /* MUY REDUCIDO: Espacio entre la línea divisoria y el título de sección */
+    border-top: 1px solid #444;
+}
+
+.section-title {
+    font-size: 1.4rem; /* REDUCIDO: Títulos de sección ("Habilidades", "Proyectos", "Tecnologías") */
+    color: #007bff;
+    margin-bottom: 0.1rem; /* MUY REDUCIDO: Espacio debajo del título de sección */
+    text-align: left;
+}
+
+/* Estilos para Habilidades */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* REDUCIDO: Espacio entre las habilidades */
+    justify-content: flex-start;
+}
+
+.skill-pill {
+    background-color: #333;
+    color: #eee;
+    padding: 0.3rem 0.6rem; /* REDUCIDO: Padding de las pills de habilidad */
+    border-radius: 15px; /* Ligeramente más redondas */
+    font-size: 0.75rem; /* REDUCIDO: Texto de las pills de habilidad */
+    border: 1px solid #555;
+    min-width: fit-content;
+    text-align: center;
+}
+
+/* Estilos para Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* REDUCIDO: Permite tarjetas aún más pequeñas */
+    gap: 0.8rem; /* REDUCIDO: Espacio entre las tarjetas de proyecto */
+}
+
+.project-card {
+    background-color: #333;
+    padding: 0.8rem; /* REDUCIDO: Padding interno de la tarjeta de proyecto para compactarla */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 1rem; /* REDUCIDO: Título de cada proyecto */
+    color: #007bff;
+    margin-bottom: 0.4rem; /* REDUCIDO: Espacio debajo del título del proyecto */
+}
+
+.project-description {
+    font-size: 0.8rem; /* REDUCIDO: Texto de la descripción del proyecto */
+    color: #ccc;
+    line-height: 1.3; /* REDUCIDO: Interlineado */
+    flex-grow: 1;
+    margin-bottom: 0.6rem; /* REDUCIDO: Espacio debajo de la descripción del proyecto */
+}
+
+.project-button {
+    display: inline-block;
+    padding: 0.4rem 0.8rem; /* REDUCIDO: Padding del botón "Ver Proyecto" */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px; /* Ligeramente menos redondo */
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 0.8rem; /* REDUCIDO: Tamaño de fuente del botón */
+    text-align: center;
+    margin-top: 0.5rem; /* REDUCIDO: Espacio sobre el botón */
+}
+
+.project-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para Tecnologías */
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* REDUCIDO: Permite iconos aún más pequeños */
+    gap: 0.6rem; /* REDUCIDO: Espacio entre los ítems */
+    justify-items: center;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem; /* REDUCIDO: Espacio entre icono y texto */
+    background-color: #333;
+    padding: 0.5rem; /* REDUCIDO: Padding de la tarjeta del icono */
+    border-radius: 6px; /* Ligeramente menos redondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 60px; /* REDUCIDO: Ancho fijo para cada tarjeta de tecnología */
+    text-align: center;
+}
+
+/* IMPORTANTE: ESTAS CLASES SON PARA EL TAMAÑO DE LOS ÍCONOS */
+.tech-icon-img {
+    width: 30px; /* REDUCIDO: Ancho de los iconos de imagen */
+    height: 30px; /* REDUCIDO: Alto de los iconos de imagen */
+    object-fit: contain;
+}
+
+.tech-icon-svg {
+    width: 30px; /* REDUCIDO: Ancho de los iconos SVG */
+    height: 30px; /* REDUCIDO: Alto de los iconos SVG */
+}
+
+.tech-name {
+    font-size: 0.65rem; /* REDUCIDO: Texto del nombre de la tecnología */
+    color: #e0e0e0;
+    margin-top: 0.1rem; /* REDUCIDO: Margen superior */
+}

@@ -20,6 +20,7 @@ const Sidebar = () => {
           <li><Link to="paises-carrusel" className={styles.navLink}>Datos JSON</Link></li>
           <li><Link to="/api-recetas" className={styles.navLink}>Datos API</Link></li>
           <li><Link to="/bitacora" className={styles.navLink}>Bitácora</Link></li>
+          
         </ul>
       </nav>
     </aside>

@@ -1,0 +1,151 @@
+/* src/views/ChangelogPage.module.css */
+
+.changelog-container {
+    max-width: 900px;
+    margin: 0.1rem auto 1rem auto;
+    padding: 1.2rem; /* Ligeramente reducido el padding general de la página */
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+.changelog-header {
+    text-align: left;
+    margin-bottom: 1.2rem; /* Ligeramente reducido el espacio debajo del encabezado */
+}
+
+.changelog-title {
+    font-size: 2rem; /* Ligeramente reducido el título principal */
+    color: #007bff;
+    margin-bottom: 0.7rem; /* Ligeramente reducido el espacio debajo del título principal */
+}
+
+.changelog-subtitle {
+    font-size: 0.9rem; /* Ligeramente reducido el subtítulo */
+    color: #bbb;
+    line-height: 1.4;
+}
+
+/* Sección que contiene las entradas de la bitácora */
+.changelog-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tarjetas un poco más estrechas */
+    gap: 1.2rem; /* Reducido el espacio entre las tarjetas de bitácora */
+    margin-top: 1.5rem; /* Reducido el margen para separar de la cabecera */
+}
+
+/* Estilos para cada entrada de versión (la "card" de la bitácora) */
+.version-entry {
+    background-color: #333;
+    padding: 1rem; /* REDUCIDO: Padding interno de la tarjeta */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 4px solid #007bff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.version-entry:hover {
+    transform: translateY(-5px);
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem; /* REDUCIDO: Espacio debajo de la cabecera de la versión */
+    padding-bottom: 0.4rem; /* REDUCIDO: Pequeño padding debajo de la cabecera para la línea */
+    border-bottom: 1px solid #444;
+}
+
+.version-number {
+    font-size: 1.2rem; /* REDUCIDO: Tamaño de la versión (ej. V0.5, V0.2) */
+    color: #007bff;
+    font-weight: bold;
+}
+
+.version-date {
+    font-size: 0.8rem; /* REDUCIDO: Tamaño de la fecha */
+    color: #bbb;
+}
+
+.version-author {
+    font-size: 0.85rem; /* Ligeramente reducido el autor */
+    color: #ccc;
+    margin-top: 0.4rem; /* Ligeramente reducido el margen superior */
+    font-style: italic;
+}
+
+/* Estilos para el tipo de cambio (new, improvement, update) */
+.change-type-tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.25rem 0.5rem; /* REDUCIDO: Padding de la etiqueta */
+    border-radius: 4px;
+    font-size: 0.7rem; /* REDUCIDO: Tamaño de fuente de la etiqueta */
+    font-weight: bold;
+    margin-top: 0.5rem; /* REDUCIDO: Espacio encima de la etiqueta */
+    margin-bottom: 0.5rem; /* REDUCIDO: Espacio debajo de la etiqueta */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Modificadores de color para tipos de cambio específicos (Opcional, pero recomendado) */
+.change-type-tag.new {
+    background-color: #28a745;
+}
+.change-type-tag.improvement {
+    background-color: #ffc107;
+    color: #333;
+}
+.change-type-tag.update {
+    background-color: #17a2b8;
+}
+
+.version-description {
+    font-size: 0.85rem; /* REDUCIDO: Tamaño del texto de la descripción */
+    color: #ccc;
+    line-height: 1.4; /* REDUCIDO: Interlineado */
+    margin-bottom: 0.7rem; /* REDUCIDO: Espacio debajo de la descripción */
+    flex-grow: 1;
+}
+
+.version-impact {
+    font-size: 0.8rem; /* REDUCIDO: Tamaño del texto de impacto */
+    color: #a0a0a0;
+    margin-top: 0.4rem; /* Ligeramente reducido el margen superior */
+    border-top: 1px dashed #444;
+    padding-top: 0.4rem; /* Ligeramente reducido el padding superior */
+}
+
+/* Responsive para la sección de bitácora */
+@media (max-width: 768px) {
+    .changelog-container {
+        padding: 0.8rem;
+        margin: 0.1rem auto 0.6rem auto;
+    }
+    .changelog-title {
+        font-size: 1.6rem;
+    }
+    .changelog-subtitle {
+        font-size: 0.85rem;
+    }
+    .changelog-sections-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    .version-entry {
+        padding: 0.8rem;
+    }
+    .version-number {
+        font-size: 1.1rem;
+    }
+    .version-date {
+        font-size: 0.75rem;
+    }
+}
