@@ -1,10 +1,10 @@
 // src/data/teamMembersDetails.js
 
 // Importa las imágenes de perfil (ajusta las rutas si es necesario)
-import danielProfileImage from '../assets/img/DC.png'; // Asumiendo src/assets/img/DC.png
-import mariaProfileImage from '../assets/img/MN.png'; // Asumiendo src/assets/img/MN.png
+import danielProfileImage from '../assets/img/DC.png';
+import mariaProfileImage from '../assets/img/MN.png';
 
-// Importa los iconos de tecnologías (ajústalos si es necesario)
+// Importa los iconos de tecnologías (ajústalos si es necesario, y asegúrate de tener los archivos SVG)
 import html5Icon from '../assets/icons/html5.svg';
 import css3Icon from '../assets/icons/css3.svg';
 import jsIcon from '../assets/icons/javascript.svg';
@@ -18,6 +18,7 @@ import figmaIcon from '../assets/icons/figma.svg';
 
 export const teamMembersDetails = [
   {
+    // Datos para Daniel (usado en HomePage y MemberPage)
     id: 'daniel-coria',
     name: 'Daniel Coria',
     fullName: 'Daniel Osvaldo Coria',
@@ -48,9 +49,10 @@ export const teamMembersDetails = [
       { name: 'HTML5', icon: html5Icon },
       { name: 'CSS3', icon: css3Icon },
       { name: 'Git', icon: gitIcon }
-    ]
+    ],
   },
   {
+    // Datos para María (usado en HomePage y MemberPage)
     id: 'maria-nazar',
     name: 'María Nazar',
     fullName: 'María Nazar',
@@ -66,21 +68,9 @@ export const teamMembersDetails = [
       'Metodologías Ágiles'
     ],
     projects: [
-      {
-        name: 'Portfolio Personal',
-        description: 'Un sitio personal que muestra mis proyectos y habilidades en desarrollo frontend y diseño UX.',
-        link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi'
-      },
-      {
-        name: 'E-commerce Rediseño UX',
-        description: 'Rediseño de la interfaz de usuario de una plataforma e-commerce existente, mejorando la navegación y el flujo de compra.',
-        link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi'
-      },
-      {
-        name: 'Aplicación de Gestión de Tareas',
-        description: 'Desarrollo de una aplicación web para la gestión de tareas, con funcionalidades de creación, edición y seguimiento.',
-        link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi'
-      }
+      { name: 'Portfolio Personal', description: 'Un sitio personal que muestra mis proyectos y habilidades en desarrollo frontend y diseño UX.', link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi' }, // <-- CAMBIO AQUÍ
+      { name: 'E-commerce Rediseño UX', description: 'Rediseño de la interfaz de usuario de una plataforma e-commerce existente, mejorando la navegación y el flujo de compra.', link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#proyectos' }, // <-- CAMBIO AQUÍ
+      { name: 'Aplicación de Gestión de Tareas', description: 'Desarrollo de una aplicación web para la gestión de tareas, con funcionalidades de creación, edición y seguimiento.', link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#proyectos' } // <-- CAMBIO AQUÍ (O a otra URL específica si existe)
     ],
     technologies: [
       { name: 'React', icon: reactIcon },
@@ -89,6 +79,32 @@ export const teamMembersDetails = [
       { name: 'CSS3', icon: css3Icon },
       { name: 'Figma', icon: figmaIcon },
       { name: 'Git', icon: gitIcon }
+    ]
+  },
+  {
+    // Datos para Manuel (usado en HomePage y MemberPage)
+    id: 'manuel-correderas',
+    name: 'Manuel Correderas',
+    fullName: 'Manuel Correderas',
+    imageUrl: 'https://manuel-correderas.github.io/ifts29_PFO2/img/perfil.jpg',
+    role: 'Web Developer',
+    bio: 'Soy un desarrollador apasionado por la tecnología y el diseño web. Mi misión es crear soluciones digitales innovadoras.',
+    skills: [
+      'Desarrollo Web (HTML, CSS, JavaScript)',
+      'Diseño Responsivo',
+      'Conceptos de UI/UX',
+      'Desarrollo de Sitios Estáticos',
+      'Mantenimiento Web'
+    ],
+    projects: [
+      { name: 'Portafolio Personal IFTS29', description: 'Mi sitio web personal desarrollado para el IFTS29, mostrando mis proyectos y habilidades.', link: 'https://manuel-correderas.github.io/ifts29_PFO2/' },
+      { name: 'Página de Destino de Producto', description: 'Diseño y desarrollo de una landing page atractiva para un nuevo producto tecnológico.', link: 'https://manuel-correderas.github.io/ifts29_PFO2/' },
+      { name: 'Sitio Web para Pequeña Empresa', description: 'Creación de un sitio web informativo para una pequeña empresa local, destacando sus servicios y contacto.', link: 'https://manuel-correderas.github.io/ifts29_PFO2/' }
+    ],
+    technologies: [
+      { name: 'HTML5', icon: html5Icon },
+      { name: 'CSS3', icon: css3Icon },
+      { name: 'JavaScript', icon: jsIcon }
     ]
   }
 ];

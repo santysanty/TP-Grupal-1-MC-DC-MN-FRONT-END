@@ -1,4 +1,5 @@
 // src/App.jsx
+// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/miembros/:id" element={<MemberPage />} />
+          <Route path="/miembros/:id" element={<MemberPage />} /> {/* <-- Asegúrate de que sea :id */}
           <Route path="/paises" element={<JsonDataPage />} />
           <Route path="/api-recetas" element={<ApiDataPage />} />
           <Route path="/receta/:id" element={<RecetaPage />} />
@@ -30,5 +31,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

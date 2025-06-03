@@ -1,72 +1,101 @@
-// src/pages/MemberPage.jsx
+// src/views/MemberPage.jsx
 
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import { teamMembersDetails } from '../data/teamMembersDetails';
+import styles from './MemberPage.module.css';
 
-const MemberPage = () => {
-  const { id } = useParams(); // capturamos el parámetro de la URL
-  const member = teamMembersDetails.find(member => member.id === id);
+export default function MemberPage() {
+  const { id } = useParams();
+  const member = teamMembersDetails.find(m => m.id === id);
 
   if (!member) {
-    return <div className="p-4 text-red-600">Miembro no encontrado.</div>;
+    return <Navigate to="/404" replace />;
   }
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <div className="flex flex-col md:flex-row items-center gap-6">
+    <div className={styles['member-profile-container']}>
+      <div className={styles['member-header']}>
         <img
           src={member.imageUrl}
-          alt={`Foto de ${member.fullName}`}
-          className="w-40 h-40 rounded-full border-4 border-blue-500 object-cover"
+          alt={member.fullName}
+          className={styles['member-profile-img']}
         />
-        <div>
-          <h1 className="text-3xl font-bold">{member.fullName}</h1>
-          <p className="text-lg text-gray-600">{member.role}</p>
-          <p className="mt-4">{member.bio}</p>
+        <div className={styles['member-header-info']}>
+          <h1>{member.fullName}</h1>
+          <p className={styles['member-role']}>{member.role}</p>
+          <p className={styles['member-bio']}>{member.bio}</p>
+          {member.link && (
+            <a
+              href={member.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles['member-portfolio-btn']}
+            >
+              Visita mi portfolio →
+            </a>
+          )}
         </div>
       </div>
 
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-2">Habilidades</h2>
-        <ul className="list-disc pl-5 space-y-1">
-          {member.skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-2">Proyectos</h2>
-        <ul className="space-y-4">
-          {member.projects.map((project, index) => (
-            <li key={index}>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline font-medium"
-              >
-                {project.name}
-              </a>
-              <p className="text-gray-700">{project.description}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-2">Tecnologías</h2>
-        <div className="flex flex-wrap gap-4">
-          {member.technologies.map((tech, index) => (
-            <div key={index} className="flex items-center space-x-2">
-              <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
-              <span>{tech.name}</span>
-            </div>
-          ))}
+      {member.skills && member.skills.length > 0 && (
+        <div className={styles['profile-section']}>
+          <h2 className={styles['section-title']}>Habilidades</h2>
+          <div className={styles['skills-grid']}>
+            {member.skills.map((skill, index) => (
+              <span key={index} className={styles['skill-pill']}>
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
-      </section>
+      )}
+
+      {member.projects && member.projects.length > 0 && (
+        <div className={styles['profile-section']}>
+          <h2 className={styles['section-title']}>Proyectos</h2>
+          <div className={styles['projects-grid']}>
+            {member.projects.map((project, index) => (
+              <div key={index} className={styles['project-card']}>
+                <h3 className={styles['project-title']}>{project.name}</h3>
+                <p className={styles['project-description']}>{project.description}</p>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles['project-button']}
+                  >
+                    Ver Proyecto
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {member.technologies && member.technologies.length > 0 && (
+        <div className={styles['profile-section']}>
+          <h2 className={styles['section-title']}>Tecnologías</h2>
+          <div className={styles['technologies-grid']}>
+            {member.technologies.map((tech, index) => (
+              <div key={index} className={styles['tech-item']}>
+                {typeof tech.icon === 'string' ? (
+                  <img src={tech.icon} alt={tech.name} className={styles['tech-icon-img']} />
+                ) : (
+                  React.cloneElement(tech.icon, {
+                    className: styles['tech-icon-svg'],
+                    width: '30px',
+                    height: '30px',
+                  })
+                )}
+                <p className={styles['tech-name']}>{tech.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
-};
-
-export default MemberPage;
+}

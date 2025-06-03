@@ -1,35 +1,60 @@
+// src/views/ChangelogPage.jsx
 import React from 'react';
 import styles from './ChangelogPage.module.css';
 
 function ChangelogPage() {
-  // Datos corregidos con tipos que coinciden con las clases CSS
+  const today = new Date('2025-06-03');
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1);
+
+  const twoDaysAgo = new Date(today);
+  twoDaysAgo.setDate(today.getDate() - 2);
+
   const changelogData = [
     {
       id: '1',
       version: 'v1.0.0',
-      date: '2025-05-01',
-      author: 'Daniel Coria',
+      date: '2025-04-30', // Fecha de la imagen
+      author: 'María Nazar', // Cambiado a María Nazar
       type: 'new',
-      description: 'Lanzamiento inicial del proyecto con funcionalidades básicas.',
-      impact: 'Alta - Base para desarrollo futuro'
+      description: 'Lanzamiento inicial del proyecto con la configuración de la estructura base (MVC y React Router) y funcionalidades principales.',
+      impact: 'Alta - Base fundamental del proyecto'
     },
     {
       id: '2',
       version: 'v1.1.0',
-      date: '2025-05-15',
-      author: 'María Nazar',
+      date: '2025-05-14', // Fecha de la imagen
+      author: 'María Nazar', // Cambiado a María Nazar
       type: 'improvement',
-      description: 'Se agregó módulo de autenticación y registro de usuarios.',
-      impact: 'Media - Mejor experiencia y seguridad'
+      description: 'Implementación del layout principal, navegación entre secciones y mejora de la experiencia de usuario.',
+      impact: 'Media - Mejora la estructura y la usabilidad'
     },
     {
       id: '3',
       version: 'v1.1.1',
-      date: '2025-05-20',
-      author: 'Manuel Correderas',
+      date: '2025-05-19', // Fecha de la imagen
+      author: 'Manuel Correderas', // Autor de la imagen
       type: 'update',
-      description: 'Corrección de errores en el formulario de login.',
-      impact: 'Baja - Mejora estabilidad'
+      description: 'Se incorporaron las APIs de países para trabajar con datos externos, expandiendo la información del proyecto.',
+      impact: 'Baja - Expansión de funcionalidades y uso de datos en tiempo real'
+    },
+    {
+      id: '4',
+      version: 'v1.2.0',
+      date: twoDaysAgo.toISOString().split('T')[0],
+      author: 'Daniel Coria',
+      type: 'improvement',
+      description: 'Mejora del diseño y la presentación de cada perfil de miembro, unificando la estética con la página principal en una nueva estructura de tarjeta.',
+      impact: 'Media - Mejora significativa en la experiencia de usuario y coherencia visual'
+    },
+    {
+      id: '5',
+      version: 'v1.2.1',
+      date: yesterday.toISOString().split('T')[0],
+      author: 'Daniel Coria',
+      type: 'update',
+      description: 'Correcciones y optimizaciones para el despliegue en Vercel y GitHub Pages.',
+      impact: 'Baja - Mejora la estabilidad de la plataforma y el proceso de despliegue'
     }
   ].sort((a, b) => new Date(b.date) - new Date(a.date));
 
