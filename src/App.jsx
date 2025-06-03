@@ -19,7 +19,7 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/miembros/:name" element={<MemberPage />} />
+          <Route path="/miembros/:id" element={<MemberPage />} />
           <Route path="/paises" element={<JsonDataPage />} />
           <Route path="/api-recetas" element={<ApiDataPage />} />
           <Route path="/receta/:id" element={<RecetaPage />} />
@@ -32,4 +32,3 @@ function App() {
 }
 
 export default App;
-

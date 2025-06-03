@@ -4,7 +4,7 @@
 import danielProfileImage from '../assets/img/DC.png'; // Asumiendo src/assets/img/DC.png
 import mariaProfileImage from '../assets/img/MN.png'; // Asumiendo src/assets/img/MN.png
 
-// Importa los iconos de tecnologías (ajústalos si es necesario, y asegúrate de tener los archivos SVG)
+// Importa los iconos de tecnologías (ajústalos si es necesario)
 import html5Icon from '../assets/icons/html5.svg';
 import css3Icon from '../assets/icons/css3.svg';
 import jsIcon from '../assets/icons/javascript.svg';
@@ -14,16 +14,15 @@ import expressIcon from '../assets/icons/express.svg';
 import pythonIcon from '../assets/icons/python.svg';
 import cplusplusIcon from '../assets/icons/cplusplus.svg';
 import gitIcon from '../assets/icons/git.svg';
-import figmaIcon from '../assets/icons/figma.svg'; // Ejemplo si María usa Figma
+import figmaIcon from '../assets/icons/figma.svg';
 
 export const teamMembersDetails = [
   {
-    // Datos para Daniel (usado en HomePage y MemberPage)
-    id: 'daniel-coria', // ID consistente para URLs
-    name: 'Daniel Coria', // Nombre para CardTeam
-    fullName: 'Daniel Osvaldo Coria', // Nombre completo para MemberPage
-    imageUrl: danielProfileImage, // Imagen para CardTeam y MemberPage
-    role: 'Full-Stack Developer & Data Analyst', // Rol para CardTeam y MemberPage
+    id: 'daniel-coria',
+    name: 'Daniel Coria',
+    fullName: 'Daniel Osvaldo Coria',
+    imageUrl: danielProfileImage,
+    role: 'Full-Stack Developer & Data Analyst',
     bio: 'Profesional IT con una sólida trayectoria en el desarrollo de soluciones de software robustas, desde interfaces de usuario dinámicas hasta sistemas backend complejos y análisis de datos. Apasionado por la optimización del rendimiento y la innovación tecnológica.',
     skills: [
       'Desarrollo Frontend (React, JavaScript, HTML5, CSS3)',
@@ -49,16 +48,12 @@ export const teamMembersDetails = [
       { name: 'HTML5', icon: html5Icon },
       { name: 'CSS3', icon: css3Icon },
       { name: 'Git', icon: gitIcon }
-    ],
-    // Estos son para tu MemberCard si quieres usarlos, aunque ahora CardTeam maneja 'imagen'
-    // cardType: 'cardTeal', 
-    // imageBorderType: 'imageBorderTeal'
+    ]
   },
   {
-    // Datos para María (usado en HomePage y MemberPage)
     id: 'maria-nazar',
     name: 'María Nazar',
-    fullName: 'María  Nazar',
+    fullName: 'María Nazar',
     imageUrl: mariaProfileImage,
     role: 'Front-end Engineer & UX Enthusiast',
     bio: 'Front-end engineer enfocada en accesibilidad y experiencia de usuario. Crea interfaces intuitivas y eficientes con un fuerte compromiso por las buenas prácticas y la accesibilidad web.',
@@ -71,45 +66,29 @@ export const teamMembersDetails = [
       'Metodologías Ágiles'
     ],
     projects: [
-        { name: 'Portfolio Personal', description: 'Un sitio personal que muestra mis proyectos y habilidades en desarrollo frontend y diseño UX.', link: 'https://maria-nazar.github.io' },
-        { name: 'E-commerce Rediseño UX', description: 'Rediseño de la interfaz de usuario de una plataforma e-commerce existente, mejorando la navegación y el flujo de compra.', link: 'https://maria-nazar.github.io' }, // Ejemplo de link
-        { name: 'Aplicación de Gestión de Tareas', description: 'Desarrollo de una aplicación web para la gestión de tareas, con funcionalidades de creación, edición y seguimiento.', link: 'https://maria-nazar.github.io' }
+      {
+        name: 'Portfolio Personal',
+        description: 'Un sitio personal que muestra mis proyectos y habilidades en desarrollo frontend y diseño UX.',
+        link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi'
+      },
+      {
+        name: 'E-commerce Rediseño UX',
+        description: 'Rediseño de la interfaz de usuario de una plataforma e-commerce existente, mejorando la navegación y el flujo de compra.',
+        link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi'
+      },
+      {
+        name: 'Aplicación de Gestión de Tareas',
+        description: 'Desarrollo de una aplicación web para la gestión de tareas, con funcionalidades de creación, edición y seguimiento.',
+        link: 'https://maria-nazar1.github.io/NEW_PORTAFOLIO/#sobre-mi'
+      }
     ],
     technologies: [
-        { name: 'React', icon: reactIcon },
-        { name: 'JavaScript', icon: jsIcon },
-        { name: 'HTML5', icon: html5Icon },
-        { name: 'CSS3', icon: css3Icon },
-        { name: 'Figma', icon: figmaIcon }, // Asegúrate de tener el icono de Figma
-        { name: 'Git', icon: gitIcon }
-    ]
-  },
-  {
-    // Datos para Manuel (usado en HomePage y MemberPage)
-    id: 'manuel-correderas',
-    name: 'Manuel Correderas',
-    fullName: 'Manuel Correderas',
-    imageUrl: 'https://manuel-correderas.github.io/ifts29_PFO2/img/perfil.jpg', // URL externa
-    role: 'Web Developer',
-    bio: 'Soy un desarrollador apasionado por la tecnología y el diseño web. Mi misión es crear soluciones digitales innovadoras.',
-    skills: [
-      'Desarrollo Web (HTML, CSS, JavaScript)',
-      'Diseño Responsivo',
-      'Conceptos de UI/UX',
-      'Desarrollo de Sitios Estáticos',
-      'Mantenimiento Web'
-    ],
-    projects: [
-        { name: 'Portafolio Personal IFTS29', description: 'Mi sitio web personal desarrollado para el IFTS29, mostrando mis proyectos y habilidades.', link: 'https://manuel-correderas.github.io/ifts29_PFO2/' },
-        // Puedes añadir más proyectos aquí si Manuel tiene
-        { name: 'Página de Destino de Producto', description: 'Diseño y desarrollo de una landing page atractiva para un nuevo producto tecnológico.', link: 'https://manuel-correderas.github.io/ifts29_PFO2/' },
-        { name: 'Sitio Web para Pequeña Empresa', description: 'Creación de un sitio web informativo para una pequeña empresa local, destacando sus servicios y contacto.', link: 'https://manuel-correderas.github.io/ifts29_PFO2/' }
-    ],
-    technologies: [
-        { name: 'HTML5', icon: html5Icon },
-        { name: 'CSS3', icon: css3Icon },
-        { name: 'JavaScript', icon: jsIcon }
+      { name: 'React', icon: reactIcon },
+      { name: 'JavaScript', icon: jsIcon },
+      { name: 'HTML5', icon: html5Icon },
+      { name: 'CSS3', icon: css3Icon },
+      { name: 'Figma', icon: figmaIcon },
+      { name: 'Git', icon: gitIcon }
     ]
   }
-  // ... Añade más integrantes si los tienes
 ];

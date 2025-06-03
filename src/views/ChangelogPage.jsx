@@ -2,15 +2,39 @@ import React from 'react';
 import styles from './ChangelogPage.module.css';
 
 function ChangelogPage() {
-  // Ejemplo de datos para el changelog, reemplaza o importa según corresponda
+  // Datos corregidos con tipos que coinciden con las clases CSS
   const changelogData = [
-    // ... mismos datos
+    {
+      id: '1',
+      version: 'v1.0.0',
+      date: '2025-05-01',
+      author: 'Daniel Coria',
+      type: 'new',
+      description: 'Lanzamiento inicial del proyecto con funcionalidades básicas.',
+      impact: 'Alta - Base para desarrollo futuro'
+    },
+    {
+      id: '2',
+      version: 'v1.1.0',
+      date: '2025-05-15',
+      author: 'María Nazar',
+      type: 'improvement',
+      description: 'Se agregó módulo de autenticación y registro de usuarios.',
+      impact: 'Media - Mejor experiencia y seguridad'
+    },
+    {
+      id: '3',
+      version: 'v1.1.1',
+      date: '2025-05-20',
+      author: 'Manuel Correderas',
+      type: 'update',
+      description: 'Corrección de errores en el formulario de login.',
+      impact: 'Baja - Mejora estabilidad'
+    }
   ].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  // Función para capitalizar la primera letra de una palabra
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
-  // Función para formatear la fecha en español (Argentina)
   const formatDate = (dateStr) =>
     new Date(dateStr).toLocaleDateString('es-AR', {
       year: 'numeric',

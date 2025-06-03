@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.logoContainer}>
-        {<img src={logoGrupo} alt="Logo del Grupo" className={styles.logo} />}
+        <img src={logoGrupo} alt="Logo del Grupo" className={styles.logo} />
       </div>
       <nav>
         <ul className={styles.navList}>
@@ -26,3 +26,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
