@@ -5,8 +5,7 @@
 
 .content {
   flex-grow: 1;
-  /* QUITAMOS COMPLETAMENTE EL PADDING SUPERIOR DEL CONTENEDOR PRINCIPAL DEL LAYOUT */
-  padding: 0 20px; /* 0px arriba y abajo, 20px a los lados */
+  padding: 0 20px;
 }
 
 @media (max-width: 768px) {
@@ -15,6 +14,6 @@
   }
 
   .content {
-    padding: 0; /* Asegura que en móviles también se elimine todo el padding */
+    padding: 0;
   }
 }
