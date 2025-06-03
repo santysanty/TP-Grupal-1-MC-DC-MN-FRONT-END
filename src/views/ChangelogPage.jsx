@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './ChangelogPage.module.css';
 
 function ChangelogPage() {
-  const today = new Date('2025-06-03');
+  const today = new Date('2025-06-02');
   const yesterday = new Date(today);
   yesterday.setDate(today.getDate() - 1);
 
@@ -14,7 +14,7 @@ function ChangelogPage() {
     {
       id: '1',
       version: 'v1.0.0',
-      date: '2025-04-30', // Fecha de la imagen
+      date: '2025-05-25', // Fecha de la imagen
       author: 'María Nazar', // Cambiado a María Nazar
       type: 'new',
       description: 'Lanzamiento inicial del proyecto con la configuración de la estructura base (MVC y React Router) y funcionalidades principales.',
@@ -23,7 +23,7 @@ function ChangelogPage() {
     {
       id: '2',
       version: 'v1.1.0',
-      date: '2025-05-14', // Fecha de la imagen
+      date: '2025-05-27', // Fecha de la imagen
       author: 'María Nazar', // Cambiado a María Nazar
       type: 'improvement',
       description: 'Implementación del layout principal, navegación entre secciones y mejora de la experiencia de usuario.',
@@ -32,7 +32,7 @@ function ChangelogPage() {
     {
       id: '3',
       version: 'v1.1.1',
-      date: '2025-05-19', // Fecha de la imagen
+      date: '2025-05-30', // Fecha de la imagen
       author: 'Manuel Correderas', // Autor de la imagen
       type: 'update',
       description: 'Se incorporaron las APIs de países para trabajar con datos externos, expandiendo la información del proyecto.',
